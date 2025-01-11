@@ -8,4 +8,9 @@ class BlogPostsController < ApplicationController
     rescue ActiveRecord::RecordNotFound
       redirect_to root_path
   end
+
+  def new
+    # generate a blog post in memory
+    @blog_post = BlogPost.new
+  end
 end
